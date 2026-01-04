@@ -12,7 +12,7 @@ const ContactList = () => {
 
   const fetchContacts = async () => {
     try {
-      const response = await axios.get('http://localhost:4000/api/user-contact/contactlist');
+      const response = await axios.get('https://dentalpark-server.onrender.com/api/user-contact/contactlist');
       const contactsData = Array.isArray(response.data) ? response.data : [];
       setContacts(contactsData);
     } catch (error) {
@@ -27,7 +27,7 @@ const ContactList = () => {
     try {
       const newStatus = currentStatus === 'replied' ? 'pending' : 'replied';
       
-     await axios.patch(`http://localhost:4000/api/user-contact/contact/update-status/${contactId}`, {
+     await axios.patch(`https://dentalpark-server.onrender.com/api/user-contact/contact/update-status/${contactId}`, {
       status: newStatus
     });
 

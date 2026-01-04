@@ -18,7 +18,7 @@ const FeedBackList = () => {
           throw new Error('No authentication token found');
         }
 
-        const response = await axios.get('http://localhost:4000/api/user-contact/feedbacks', {
+        const response = await axios.get('https://dentalpark-server.onrender.com/api/user-contact/feedbacks', {
           headers: {
             Authorization: `Bearer ${token}`
           }
