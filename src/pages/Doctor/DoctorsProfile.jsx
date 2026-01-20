@@ -46,7 +46,6 @@ const DoctorsProfile = () => {
       phone_no: profileData.phone_no,
       about: profileData.about,
       fees: profileData.fees,
-      experience: profileData.experience
     });
     setIsEditing(true);
   };
